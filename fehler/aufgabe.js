@@ -35,19 +35,18 @@
 
 
 
-
-
-
-
-
 /**Anführungszeichen ist Falsch**/
 const API_URL = "api.sparkasse.de/v3/accounts";
+
 /**Muss großgeschreiben werden**/
 const API_KEY = "lwqdjOI987HHUIaihjaskdh";
+
 /**Anführungszeichen ist Falsch**/
 const TRANZFER_CUSTOMER_ID = "tranzfer-009";
+
 // "Name" muss mit einem Großbuchstaben beginnen**//
 var bankName = "Sparkasse";
+
 /**man muss Klammer auf sein**/
 console.log("Initialisiere Verbindung...");
 
@@ -59,9 +58,10 @@ let kunde1 = "Jan Müller";
 //**muss mit 1 Buchstabe geschrieben werden,   K von "Kunde" sollte Groß sein,  man soll ein Semikolon am Ende setzen  und Anführungszeichen ist Falsch **//
 let kunde2 = "Martina Stein";
 //**Anführungszeichen sollten entfernt werden und Zwischen den Zahlen dürfen keine Leerzeichen stehen.**/
-let iban1 = 1234000099089999;
+let iban1 = "1234000099089999";
+
 //**Da dies zuvor der Variablenname war, sollte ein anderer Variablenname vergeben werden.**//
-let iban2 = 1222000099089999;
+let iban2 = "1222000099089999";
 
 //**Zwischen „let“ und „betrag“ muss ein Leerzeichen stehen,   man soll einen einzelnen Punkt machen, keinen doppelten Punkt.**//
 let betrag = 23.3;
