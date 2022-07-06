@@ -32,6 +32,8 @@ console.log(0.2 + 0.4);
 console.log(0.2 + 0.5);
 console.log(0.2 + 0.6);
 console.log("---");
+console.log("---");
+console.log("---");
 // Das Ergebnis weicht etwas vom erwarteten Ergebnis ab und ist somit nicht gleich.
 console.log(0.2 + 0.1 === 0.3);
 // Ein Trick ist, die Nachkommastellen zu beseitigen, indem die beiden Zahlen
