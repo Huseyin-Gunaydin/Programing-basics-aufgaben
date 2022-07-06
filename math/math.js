@@ -25,6 +25,9 @@ console.log("-------");
 // Ergebnisse sind nicht immer so, wie wir sie erwarten würden.
 // Das liegt daran, dass JavaScript die Darstellung IEEE 754 für Zahlen verwendet.
 // Hierbei kann es zu Rundungsfehlern kommen.
+console.log("---");
+console.log("---");
+console.log("---");
 console.log(0.2 + 0.1);
 console.log(0.2 + 0.2);
 console.log(0.2 + 0.3);
