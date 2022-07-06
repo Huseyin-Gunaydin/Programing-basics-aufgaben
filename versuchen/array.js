@@ -6,8 +6,10 @@ let handys = ["iphone 12", "iphone 13", "iphone 14"];
 let preise = ["800", "900", "1100"];
 let farbe = ["silber", "schwarz", "weiß"];
 
-console.log(preise[3]);
 
+console.log(preise.includes("800"));
+
+console.log(preise.indexOf("600"));
 
 // let produkt1 =["iphone 12", 800, "silber"];
 // let produkt2 =[];
