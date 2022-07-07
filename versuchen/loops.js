@@ -47,14 +47,16 @@
 //     "email":"Huseyingunaydin@gmail.com"
 // }
 
-// for (let key in user){
-//     console.log(user[key]);
+
+// for (let i in user){
+//     // console.log(i);
+//     console.log(user[i]);
 // }
 
 
 
 
-let sayilar = [1,5,7,15,3,25,8,2,4];
+// let sayilar = [1,5,7,15,3,25,8,2,4];
 
 //1-Sayilar listesindeki her bur ekemanin karesini yazdirirniuz.
 // for(let i=0; i<sayilar.length; i++){
@@ -82,7 +84,7 @@ let sayilar = [1,5,7,15,3,25,8,2,4];
 // console.log(toplam);
 
 
-let urunler = ["iphone 12","samsung s22", "iphone 13","samsung s23", "samsung s20"];
+// let urunler = ["iphone 12","samsung s22", "iphone 13","samsung s23", "samsung s20"];
 
 //4- Urunler listesindeki tüm ürünleri büyük harfle yazdiriniz.
 
@@ -130,3 +132,43 @@ let urunler = ["iphone 12","samsung s22", "iphone 13","samsung s23", "samsung s2
 
 //tüm ögrencilerin not ortalamasi kactir.
 
+
+
+// let toplam=0;
+// for(let i=0; i<10; i++){
+//     toplam= toplam+i;
+//     console.log(i+"-----"+toplam);
+// }
+
+
+
+let b = {
+    one: {
+      a: 1,
+      b: 2,
+      c: 3
+    },
+    two: {
+      a: 4,
+      b: 5,
+      c: 6
+    },
+    three: {
+      a: 7,
+      b: 8,
+      c: 9
+    }
+  };
+  
+  let myKeys = Object.keys(b);
+  
+  for (item of myKeys) {
+    //print the key
+    console.log('Key', item)
+    
+    //print the value (which will be another object)
+    console.log('Value', b[item])
+    
+    //print the nested value
+    console.log('Nested value', b[item]['a'])
+  }
