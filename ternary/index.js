@@ -1,5 +1,5 @@
 /**
- * Ternary
+//  * Ternary
  *
  * Was ist eine Ternary?
  * Ein kurzes if, else statement auf einer Zeile.
