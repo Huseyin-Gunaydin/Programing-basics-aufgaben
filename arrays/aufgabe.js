@@ -72,22 +72,20 @@ console.log(WorldCities.join(" "));
 let hellowelt = ["H", "e", "l", "l", "o", "W", "e", "l", "t"];
      console.log(hellowelt.reverse());
 
-
-
      let hallo="Hello World";
      let reverseHallo=[...hallo].reverse().join('""');
      console.log(reverseHallo);
 
 
 
-// //**Bonus
-// let halloWelt = "HalloWelt";
-// let neueHalloWelt="";
+//**Bonus
+let halloWelt = "HalloWelt";
+let neueHalloWelt="";
 
-// for(let i=halloWelt.length -1; i>=0; i--){
-//     neueHalloWelt+=halloWelt[i];
-// }
-// console.log(neueHalloWelt);
+for(let i=halloWelt.length -1; i>=0; i--){
+    neueHalloWelt+=halloWelt[i];
+}
+console.log(neueHalloWelt);
 
 
 
