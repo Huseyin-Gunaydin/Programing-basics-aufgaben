@@ -24,16 +24,13 @@ console.log(randomNumbers);
 // Frage1
 
 let a = [];
+// for(let i in randomNumbers)  (let i=0; i<randomNummers.length; i++)
 for (let i of randomNumbers) {
   if (randomNumbers[i] < 50) {
     a.push(randomNumbers[i]);
   }
 }
 console.log(` Frage 1 = Es gibt ${a.length} Zahlen unter 50.`);
-
-
-
-
 
 //Frage 2
 
@@ -48,13 +45,6 @@ for (let i = 0; i < randomNumbers.length; i++) {
 }
 console.log(" Frage 2 = Zahlen unter 50", unter50);
 console.log(" Frage 3 = Zahlen große und gleich 50", große50);
-
-
-
-
-
-
-
 
 // 1. Gib die Anzahl der Zahlen unter 50 aus.
 // Gib zur Kontrolle auch das Array der Zufallszahlen aus.
