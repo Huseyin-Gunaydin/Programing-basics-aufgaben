@@ -48,7 +48,23 @@ console.log(
     "hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin"
   )
 );
+console.log("-----------------------alternative lösung------------------------------");
+
+function trim(text){
+const maxLenght =30;
+const words= text.split(" ");
+return words.splice(0, maxLenght).join(" ")+(words.length > maxLenght ? "...": "");
+}
+
+console.log(trim("hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin hüseyin günaydin berlin"));
+
+
 
 console.log("-----------------------Frage4------------------------------");
 
 console.log("-----------------------Frage5------------------------------");
+
+
+
+
+
