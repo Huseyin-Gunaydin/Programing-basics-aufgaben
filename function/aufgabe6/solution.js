@@ -9,13 +9,6 @@ const lägstenstring = (a,b,c) => (a, b, c);
 console.log(lägstenstring(text1, text2, text3));
 
 
-
-
-
-
-
-
-
 function reverseWords(str) {
     let reverseWordArr = str.split(" ").map(word => word.split("").reverse().join(""));
     return reverseWordArr.join(" ");
