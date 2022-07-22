@@ -32,3 +32,32 @@ console.log("4");
 
 // Funktionsaufruf
 nameDerFunktion();
+
+function printGreeting() {
+  let myFirstName = "Hüseyin";
+  let myTrimmedString = myFirstName.trim();
+  let myLastName = "Günaydin";
+  let greeting = "Hello " + myTrimmedString + " " + myLastName;
+  return greeting;
+}
+let greeting = printGreeting();
+console.log(greeting);
+
+console.log(printGreeting());
+
+// let printGreetingArrow= (firstName, lastName)=>{
+//   if(typeof firstName !=="string" || typeof lastName !== "string"){
+//   return "Falsch Parameter";
+//   }
+// return "Hallo " + firstName.trim() + " " + lastName.trim();
+// };
+
+// console.log(printGreetingArrow(" Hüseyin "," Günaydin "))
+
+let printGreetingArrow = (firstName, lastName) => {
+  return typeof firstName !== "string" || typeof lastName !== "string"
+    ? "Falsch Parameter"
+    : `Hallo ${firstName.trim()}  ${lastName.trim()}`;
+};
+
+console.log(printGreetingArrow(" Hüseyin ", " Günaydin "));
