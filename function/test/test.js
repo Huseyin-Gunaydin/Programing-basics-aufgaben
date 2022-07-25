@@ -61,6 +61,3 @@ function vowelCount(text) {
     }
     return numberOfVowels;
 }
-
-// DO NOT EDIT below this line - This will result in an automatic fail
-// ÄNDERE NICHTS unterhalb dieser Zeile - Sonst schlägt der automatische Test fehl
