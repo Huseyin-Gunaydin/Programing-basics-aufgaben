@@ -19,7 +19,14 @@ const steuerBanane = berechneMehrwertsteuer(preisBanane);
 console.log("Steuer Banane:", steuerBanane);
 
 /**
+ * 
+ * 
+ * 
+ * 
  * Vergisst man das return statement, steht an der Stelle des Funktionsaufrufes undefined
+ * 
+ * 
+ * 
  */
 
 function addiere(zahl1, zahl2) {
