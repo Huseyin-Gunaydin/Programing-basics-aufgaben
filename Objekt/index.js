@@ -1,4 +1,25 @@
 
+// Um Newsletter zu versenden, benötigen wir einige Daten unserer User. Am wichtigsten ist natürlich die Email-Adresse, aber auch Vor- und Nachnamen für die Anrede sollen gespeichert werden. Noch dazu kann jeder User eine Liste mit Interessensgebieten angeben (Musik, IT, Sport...), um spezielle Newsletter zu erhalten.
+// 1. Erstelle eine Übersicht mit unseren Usern. Wende hier dein Wissen über Objekte an, um eine möglichst effiziente Datenstruktur zu erreichen.
+// 2. Beim Aufruf des Skripts soll eine Ausgabe erzeugt werden, die in etwa so aussieht:
+// "Peter Müller ist mit der Adresse petermueller@web.de registriert und erhält Newsletter zu den Themen Sport und Kochen.
+// Sarah Schmidt ist mit der Adresse sarah@schmidt.de registriert und erhält Newsletter zu den Themen Musik, IT und Reisen.
+// Zusatzaufgaben:
+// 3. Berücksichtige den Fall, dass ein User kein Interessensgebiet angegeben hat und formuliere die Ausgabe hierfür passend um.
+// 4. Nimm noch ein Registrierungsdatum mit auf und lass es ebenfalls ausgeben ("... ist mit der Adresse x seit y registriert...")
+
+
+
+// Raja Underwood,pellentesque.tincidunt.tempus@outlook.org, Musik | IT | Sport,
+// Owen Bennett,aliquet@protonmail.net, Programmieren | Nachrichten | Aktien,
+// Amery Conway,erat.neque.non@google.ca, Reisen | Festivals,
+// Lillian Clay,adipiscing.elit@aol.couk, Autos | IT,
+// Nicholas Berg,nullam.feugiat@yahoo.net, Essen
+
+
+
+
+
 const KundeA = {
     vorname : "Raja",
     nachname : "Underwood",
