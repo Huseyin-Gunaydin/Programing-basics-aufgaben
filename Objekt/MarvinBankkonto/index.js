@@ -21,9 +21,8 @@ const Bankkonto = {
     kontoinhaber : "Hüseyin Günaydin",
 
     abheben : function(betrag){
-        const neuerKontoStand = this.kontostand -betrag;
-        if(neuerKontoStand < 0){
-            console.log(`${betrag}€ konnte nicht abgehoben werden.`)
+        if(betrag > this.kontostand ){
+            console.log(`${betrag}€ konnte nicht abgehoben werden.`);
             return
         }
         this.kontostand = this.kontostand - betrag;
@@ -39,7 +38,7 @@ const Bankkonto = {
 }
 }
 
-Bankkonto.abheben(5500);
+Bankkonto.abheben(55000);
 Bankkonto.einzahlen(1000);
 Bankkonto.einzahlen(100000);
 Bankkonto.zeigInfo();
