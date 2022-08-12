@@ -8,18 +8,16 @@
 
 //Frage 1
 
-function isWithinRange(num, { min, maks }) {
-  if (num >= min && num <= maks) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+function isWithinRange(num, objekt) {
+  if (num >= objekt.min && num <= objekt.max) 
+  return true;
+  return false;
 }
 
-isWithinRange(4, { min: 0, maks: 5 });
-isWithinRange(4, { min: 4, maks: 5 });
-isWithinRange(4, { min: 6, maks: 10 });
-isWithinRange(5, { min: 5, maks: 5 });
+console.log(isWithinRange(4, { min: 0, max: 5 }));
+console.log(isWithinRange(4, { min: 4, max: 5 }));
+console.log(isWithinRange(4, { min: 6, max: 10 }));
+console.log(isWithinRange(5, { min: 5, max: 5 }));
 
 // 2. Scrabble. Erstelle eine Funktion calcMaxScrabbleScore, die bei einem Array von Scrabble-Steinen die maximale Punktzahl zählt, die ein Spieler mit den Steinen in seiner Hand erreichen kann. Beispiel:
 // const scrabbleHand = [
@@ -35,23 +33,26 @@ isWithinRange(5, { min: 5, maks: 5 });
 
 // // Frage 2
 
-// function calcMaxScrabbleScore(object) {
-//     const scoreArr = []
-//     for(let i = 0; i < object.length; i++){
-//     scoreArr.push(Object.values(object[i]))
-//     }
-//     const numArr = []
-//     for(let j = 0; j < scoreArr.length; j++){
-//     numArr.push(scoreArr[j].splice(1, 1))
-//     }
-//     let sum = 0
-//     for(let k = 0; k < numArr.length; k++){
-//     sum += parseInt(numArr[k])
-//     }
-//     return sum;
-//     }
+const scrabbleHand = [
+  { tile: "N", score: 1 },
+  { tile: "K", score: 5 },
+  { tile: "Z", score: 10 },
+  { tile: "X", score: 8 },
+  { tile: "D", score: 2 },
+  { tile: "A", score: 1 },
+  { tile: "E", score: 1 },
+];
 
-//     console.log(calcMaxScrabbleScore(scrabbleHand));
+function calcMaxScrabbleScore(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+      const element = array[i];
+      result += element.score;
+  }
+  return result;
+}
+
+console.log(calcMaxScrabbleScore(scrabbleHand));
 
 // 3. Ist es ein leeres Objekt? Erstelle eine Funktion isEmptyObject, die true zurückgibt, wenn ein Objekt leer ist, und false, wenn nicht.
 // Beispiele:
@@ -60,16 +61,12 @@ isWithinRange(5, { min: 5, maks: 5 });
 
 //Frage 3
 
-function isEmptyObject(x) {
-  if (Object.entries(x).length === 0) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+function isEmptyObject(obj) {
+  return Object.keys(obj).length === 0;
 }
 
-isEmptyObject({}); //➞ true
-isEmptyObject({ a: 1 }); //➞ false
+console.log(isEmptyObject({})); //➞ true
+console.log(isEmptyObject({ a: 1 })); //➞ false
 
 // 4. Buchstaben zählen. Erstelle eine Funktion, die die Anzahl der Vorkommen jedes Buchstabens in einer Zeichenkette zählt. Gib ein Objekt mit Schlüssel-Wert-Paaren von Buchstaben und der Anzahl der Vorkommen für jeden Buchstaben zurück.
 // Beispiel:
@@ -77,12 +74,23 @@ isEmptyObject({ a: 1 }); //➞ false
 
 //Frage 4
 
-let countLetters = (str) => {
-  return str.split("").reduce((total, letter) => {
-    total[letter] ? total[letter]++ : (total[letter] = 1);
-    return total;
-  }, {});
-};
+function countLetters(str) {
+  let result = {};
+
+  const array = str.split("");
+
+  for (let i = 0; i < array.length; i++) {
+      if (result[array[i]] === undefined) {
+          result[array[i]] = 1;
+      } else {
+          result[array[i]] += 1;
+      }
+  }
+
+  return result;
+}
+
+console.log(countLetters("text"));
 
 console.log(countLetters("tree"));
 console.log(countLetters("computer.com"));
@@ -97,24 +105,21 @@ console.log(countLetters("computer.com"));
 
 // Frage 5
 
-function freeShipping(object) {
-  let sumOfShopping = 0;
-  const objectToArr = Object.values(object);
-  for (let i = 0; i < objectToArr.length; i++) {
-    sumOfShopping += objectToArr[i];
+function freeShipping(products) {
+  let sumOfPrices = 0;
+  const objectToArray = Object.values(products);
+  for (let i = 0; i < objectToArray.length; i++) {
+      sumOfPrices += objectToArray[i];
   }
-  if (sumOfShopping >= 50) {
-    console.log(true); 
-  } else {
-    console.log(false);
-  }
+
+  return sumOfPrices >= 50;
 }
 
-freeShipping({ "Sponge": 3.50, "Soap": 5.99 }) //➞ false
-freeShipping({ "Surround Sound Equipment": 499.99 }) //➞ true
-freeShipping({ "Wool": 13.99, "Knitting Needles": 15.50, "Bag": 13.99 }) //➞ false
-
-
+console.log(freeShipping({ Sponge: 3.5, Soap: 5.99 }));
+console.log(freeShipping({ "Surround Sound Equipment": 499.99 }));
+console.log(
+  freeShipping({ Wool: 13.99, "Knitting Needles": 15.5, Bag: 13.99 })
+);
 
 
 // 6. Programmierobjekt.
@@ -145,11 +150,7 @@ const programming = {
       isRewarding: true,
       difficulty: 8,
       jokes: "https://www.quora.com/What-are-the-most-popular-computer-programming-jokes",
-      worthwhile: function(){
-        if(this.isChallenging === true && this.isRewarding === true){
-            console.log (`Learning the programming languages: ${this.languages} is rewarding and challenging!`);
-        }
-      }
+  
     };
 
     programming.languages.push("GO");
@@ -165,11 +166,28 @@ for ( let i=0; i<programming.languages.length; i++){
 };
 
 
-const values= Object.values(programming);
+// Object.keys(programming) geht auch
+for (const key in programming) {
+  console.log(key);
+}
 
-for ( let i=0; i<values.length; i++){
-    console.log(values[i])
+// Object.values(programming) geht auch
+for (const key in programming) {
+  console.log(programming[key]);
+}
+
+
+programming.worthwhile= function(){
+  if(this.isChallenging === true && this.isRewarding === true){
+      console.log (`Learning the programming languages: ${this.languages} is rewarding and challenging!`);
+  }
 };
+programming.worthwhile();
+console.log(programming.worthwhile);
+console.log(freeShipping);
 
-console.log(programming)
-programming.worthwhile()
+
+
+Object.freeze(programming); // Verhindert dass das Objekt verändert wird
+programming.banane = "2";
+console.log(programming);
