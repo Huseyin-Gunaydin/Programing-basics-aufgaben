@@ -191,3 +191,32 @@ console.log(freeShipping);
 Object.freeze(programming); // Verhindert dass das Objekt verändert wird
 programming.banane = "2";
 console.log(programming);
+
+
+
+
+
+
+
+const months = ['January', 'February', 'March', 'April'];
+
+months.forEach(function(month, index, array) {
+  console.log(month, index, array);
+});
+
+/* output
+
+January 0 ["January", "February", "March", "April"]
+February 1 ["January", "February", "March", "April"]
+March 2 ["January", "February", "March", "April"]
+April 3 ["January", "February", "March", "April"]
+
+*/
+
+
+const months1 = ['January', 'February', 'March', 'April'];
+const transformedArray = months1.map(function (month) {
+  return month.toUpperCase();
+});
+
+console.log(transformedArray); // ["JANUARY", "FEBRUARY", "MARCH", "APRIL"]
