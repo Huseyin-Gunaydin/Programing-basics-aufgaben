@@ -8,8 +8,6 @@ let person = {
     hobbies: ["Piano"],
   };
 
-
-  
   //let person2 = person;
  let person2 = { ...person };
   
