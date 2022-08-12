@@ -74,9 +74,8 @@ const person = {
   alter: 37,
   stadt: "Berlin",
 };
-for (property in person) {
-  console.log(property);
-  console.log(person[property]);
+for (const item in person) {
+  console.log(item, person[item]);
 }
 
 // //Frage 2
@@ -119,8 +118,7 @@ let objectToArray1 = {
 };
 
 function array(x) {
-  var result = Object.entries(x);
-  return result;
+  return Object.entries(x)
 }
 console.log(array(objectToArray));
 console.log(array(objectToArray1));
@@ -132,20 +130,26 @@ let student = {
   course: "English",
 };
 
-function Objektkeys() {
-  console.log(Object.keys(student));
+function Objektkeys(obj) {
+  return Object.keys(obj)
 }
-Objektkeys();
+console.log(Objektkeys(student));
 
 //Bonus frage 3
 let first = { firstName: "John" };
 let last = { lastName: "Smith" };
 
-function zusammenführt(obj1, obj2) {
-  var result = Object.assign(obj1, obj2);
-  return result;
+function combineObjects(obj1, obj2) {
+  let merged = {...obj1, ...obj2} 
+  return merged;
 }
-console.log(zusammenführt(first, last));
+console.log(combineObjects(first, last));
+
+// function zusammenführt(obj1, obj2) {
+//   var result = Object.assign(obj1, obj2);
+//   return result;
+// }
+// console.log(zusammenführt(first, last));
 
 //Bonus frage 4
 
@@ -174,12 +178,15 @@ const object5 = {
     c: 3,
   };
 
-function x(x) {
+function getKeyValueArrays (obj) {
 
-  const keys = Object.keys(x);
-  const value = Object.values(x);
+//  const keys = Object.keys(obj);
+//  const value = Object.values(obj);
+//   return [keys, value];
 
-  return [keys, value];
+  return [Object.keys(obj), Object.values(obj)];
+
+
 }
 
-console.log(x(object5));
+console.log(getKeyValueArrays(object5));
