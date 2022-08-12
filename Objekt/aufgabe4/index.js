@@ -12,7 +12,7 @@
 
 
 
-// const MyMath ={
+// const MyMath ={s
 
     
 // ceil: function(num){
