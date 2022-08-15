@@ -53,3 +53,54 @@
  // Unbekannte Anzahl
  const telefonbuch = ["+49123343", "+491232137"];
  console.log(telefonbuch);
+
+
+ var sayi = [15, 40, 59, 110, 40, 125, 150];
+
+ function nummer (sayi){
+    return sayi <= 100;
+ }
+ console.log(sayi.filter(nummer))
+
+
+
+ var array = [10, 20, 30, 40, 5]; 
+  
+ var found = array.filter(function (element) { 
+     return element > 20; 
+ }); 
+
+ console.log(found); 
+
+
+
+var bul = array.filter(function(sayi){
+    return sayi % 2 == 0
+})
+console.log(bul)
+
+
+
+let array3 = [1,2,3,4,5,6,7,8,9,10,12,14,15,16,17,21]
+ let result3 = array3.filter((piece)=>{
+    return piece >= 10
+ })
+ console.log(result3);
+
+
+
+ let array5 = Array.from({length:4}, function (value, index){
+    return index*5
+ })
+ console.log(array5)
+
+
+
+
+ let total = [ 1,3,5,7,9];
+ let result2= total.reduce(( a, b)=>{
+    return a+b
+ })
+ console.log(result2)
+
+

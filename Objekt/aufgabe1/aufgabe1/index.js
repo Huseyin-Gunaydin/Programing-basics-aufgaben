@@ -17,9 +17,6 @@
 // Nicholas Berg,nullam.feugiat@yahoo.net, Essen
 
 
-
-
-
 const KundeA = {
     vorname : "Raja",
     nachname : "Underwood",
