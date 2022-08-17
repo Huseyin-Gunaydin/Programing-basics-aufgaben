@@ -6,7 +6,7 @@
 // Wir müssen daher darauf achten, dass unser Algorithmus mit unterschiedlichen Mengen arbeiten kann.
 
 function getRandomNumbers(amount) {
-  const numbers = Array();
+  const numbers =[];
 
   for (let i = 0; i < amount; i++) {
     numbers.push(parseInt(Math.random() * 100));
@@ -18,6 +18,7 @@ function getRandomNumbers(amount) {
 // Beispiel: gib 10 Zufallszahlen aus und speichere sie in der Variable randomNumbers
 const randomNumbers = getRandomNumbers(10);
 console.log(randomNumbers);
+console.log(getRandomNumbers(10));
 
 // --------------------------------------------------------------------------
 
@@ -34,7 +35,7 @@ console.log(` Frage 1 = Es gibt ${a.length} Zahlen unter 50.`);
 
 //Frage 2
 
-let unter50 = Array();
+let unter50 = [];
 let große50 = Array();
 for (let i = 0; i < randomNumbers.length; i++) {
   if (randomNumbers[i] < 50) {
