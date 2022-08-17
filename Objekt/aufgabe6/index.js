@@ -46,8 +46,10 @@ const scrabbleHand = [
 function calcMaxScrabbleScore(array) {
   let result = 0;
   for (let i = 0; i < array.length; i++) {
-      const element = array[i];
-      result += element.score;
+      //const element = array[i];
+      //result += element.score;
+      
+      result += array[i].score;
   }
   return result;
 }
