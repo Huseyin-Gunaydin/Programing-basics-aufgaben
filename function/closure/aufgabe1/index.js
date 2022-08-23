@@ -64,6 +64,6 @@ function aufgabe1(outnummer) {
   
   
   
-  // google("Mars")      /// sucht
-  // duckDuckGo("Erde")  /// sucht
-  // bing("Jupiter")     /// sucht
+  google("Mars")      /// sucht
+  duckDuckGo("Erde")  /// sucht
+  bing("Jupiter")     /// sucht
