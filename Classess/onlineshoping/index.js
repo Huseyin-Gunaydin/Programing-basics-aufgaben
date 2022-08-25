@@ -5,42 +5,50 @@ class Product{
     }
 
     toText(){
-        console.log(`${this.name}, ${this.price}€. Enthält ${this.price * 0.19}€ MwSt.`)
+       return`${this.name}, ${this.price}€. Enthält ${this.price * 0.19}€ MwSt.`
     }
     containedVAT(){
-        console.log(`${this.price * 0.19}€ MwSt.`)
+        return `${this.price * 0.19}€ MwSt.`
 
     }
 }
-
-const trainingsanzug = new Product("Adidas Trainingsanzug", 150);
-const schuhe = new Product("Puma Laufschuhe", 80);
-const socken = new Product("Sockenset", 5);
-
-console.log(trainingsanzug)
-console.log(schuhe)
-console.log(socken)
-
-trainingsanzug.toText();
-trainingsanzug.containedVAT();
-
-
 
 
 class Cart {
     constructor(){
         this.products=[];
-
     }
 
     addProduct(shoppedProduct){
-
+        if(!(shoppedProduct instanceof Product)){
+            return `Dieses Produkt ist in unserem Shop nicht verfügbar!`
+        }
+        this.products.push(shoppedProduct);
+        return `Ihr Warenkorb enthält jetzt ${this.products.length} Produkt(e)`;
     }
+    getProductInfoCart() {
+        this.products.forEach((product) => {
+            console.log(product.toText());
+        });
+    }
+    getTotalItemsPrice() {
+        const totalPrice = this.products.reduce((prev, curr) => {
+            return prev + curr.price;
+        }, 0);
+        return `Der Gesamtbetrag für ${this.products.length} Artikel in Ihrem Warenkorb beträgt ${totalPrice} €.`;
+}
 }
 
 
-const kart = new Cart();
+const trainingsanzug = new Product("Adidas Trainingsanzug", 150);
+const schuhe = new Product("Puma Laufschuhe", 80);
+const socken = new Product("Sockenset", 5);
 
-kart.friends.push=["Vural", "Rahman"]
 
-console.log(kart.friends)
+const cart = new Cart();
+console.log(cart.addProduct(trainingsanzug));
+console.log(cart.addProduct(schuhe));
+console.log(cart.addProduct(socken));
+cart.getProductInfoCart();
+console.log(cart.getTotalItemsPrice());
+
