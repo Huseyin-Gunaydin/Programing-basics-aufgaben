@@ -47,12 +47,12 @@
 // kullanici = { ...kullanici, memleket: "kirsehir" };
 // console.log(kullanici);
 
-// const urunler = [
-//   { id: 1, name: "kalem", fiyat: 5 },
-//   { id: 2, name: "Defter", fiyat: 10 },
-//   { id: 3, name: "Silgi", fiyat: 2 },
-//   { id: 4, name: "Kalemtras", fiyat: 7 },
-// ];
+const urunler = [
+  { id: 1, name: "kalem", fiyat: 5 },
+  { id: 2, name: "Defter", fiyat: 10 },
+  { id: 3, name: "Silgi", fiyat: 2 },
+  { id: 4, name: "Kalemtras", fiyat: 7 },
+];
 
 // // dizide,  yazdigimiz kosulu saglayen dizi icindeki ilk buldugu elemani gösterir. ve yazdirir. sonrasina bakmaz.
 
@@ -62,17 +62,14 @@
 // );
 
 // //dizide yazdigimiz kosulu saglayan eleman bulunuyorsa true döndürüyor ya da false döndürüyor.
-// console.log(
-//   "Some: ",
-//   urunler.some((urun) => urun.fiyat <= 1)
-// );
+//console.log("Some", urunler.some((urun) => urun.fiyat <= 2));
 
 // //dizide yazdigimiz kosulu bütün elemanlar sagliyor mu saglamiyor mu diye bakar. Eger sagliyorsa true döndürür. saglamiyorsa false döndürür.
 
-// console.log(
-//   "Every: ",
-//   urunler.every((urun) => urun.fiyat > 1)
-// );
+console.log(
+  "Every: ",
+  urunler.every((urun) => urun.fiyat > 1)
+);
 
 // //filter
 
@@ -99,32 +96,62 @@
 // console.log(toplamString)
 
 
-const names=["Sören", "Edgar", "Richard", "Ian", "Justin", "Tom"];
+// const names=["Sören", "Edgar", "Richard", "Ian", "Justin", "Tom"];
 
-let counter= 0;
+// let counter= 0;
 
-// names.forEach(greet);
+// // names.forEach(greet);
 
-// function greet(name){
-//   console.log(`Hi, ich bin ${name}!`);
+
+// const names=["Sören", "Edgar", "Richard", "Ian", "Justin", "Tom"];
+
+// let counter= 0;
+
+// // names.forEach(greet);
+
+// // function greet(name){
+// //   console.log(`Hi, ich bin ${name}!`);
+
+// // }
+
+// console.log("---");
+
+// names.forEach(greetA11);
+
+// function greetA11(myName){
+//   console.log(`Hi, ich bin ${myName}!`);
+//   names.forEach(name => sayHelloTo(name, myName))
+//   counter ++;
 
 // }
 
-console.log("---");
+// function sayHelloTo(name, myName){
+//   if(name===myName) return;
+//   console.log(`-Hello ${name}!`);
+//   counter ++;
+// }
 
-names.forEach(greetA11);
+// console.log({length: names.length, counter})
+// // function greet(name){
+// //   console.log(`Hi, ich bin ${name}!`);
 
-function greetA11(myName){
-  console.log(`Hi, ich bin ${myName}!`);
-  names.forEach(name => sayHelloTo(name, myName))
-  counter ++;
+// // }
 
-}
+// console.log("---");
 
-function sayHelloTo(name, myName){
-  if(name===myName) return;
-  console.log(`-Hello ${name}!`);
-  counter ++;
-}
+// names.forEach(greetA11);
 
-console.log({length: names.length, counter})
+// function greetA11(myName){
+//   console.log(`Hi, ich bin ${myName}!`);
+//   names.forEach(name => sayHelloTo(name, myName))
+//   counter ++;
+
+// }
+
+// function sayHelloTo(name, myName){
+//   if(name===myName) return;
+//   console.log(`-Hello ${name}!`);
+//   counter ++;
+// }
+
+// console.log({length: names.length, counter})
