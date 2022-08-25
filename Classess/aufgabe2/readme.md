@@ -35,10 +35,9 @@ Method
    zeigt die aktuelle datum an
 
 8. Ist `now` wahrheitsgemäß?
+    Es ist now wahrheitsgemäß.
 
-Es ist now wahrjeitsgemäß.
-
-9. Was bekommst du, wenn du `console.log(now === test)` eingibst? Und warum?
+9.  Was bekommst du, wenn du `console.log(now === test)` eingibst? Und warum?
    der beiden sind milisekunden unterschiedlich
 
 10. Was bekommst du, wenn du `console.log(now === Date)` eingibst?
