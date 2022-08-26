@@ -64,7 +64,7 @@ const urunler = [
 // //dizide yazdigimiz kosulu saglayan eleman bulunuyorsa true döndürüyor ya da false döndürüyor.
 //console.log("Some", urunler.some((urun) => urun.fiyat <= 2));
 
-// //dizide yazdigimiz kosulu bütün elemanlar sagliyor mu saglamiyor mu diye bakar. Eger sagliyorsa true döndürür. saglamiyorsa false döndürür.
+izide yazdigimiz kosulu bütün elemanlar sagliyor mu saglamiyor mu diye bakar. Eger sagliyorsa true döndürür. saglamiyorsa false döndürür.
 
 console.log(
   "Every: ",
