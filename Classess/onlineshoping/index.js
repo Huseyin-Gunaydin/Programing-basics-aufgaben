@@ -20,11 +20,14 @@ class Cart {
     }
 
     addProduct(shoppedProduct){
-        if(!(shoppedProduct instanceof Product)){
+       
+     //   if(!(shoppedProduct instanceof Product)){
+        if(shoppedProduct.length === 0){
             return `Dieses Produkt ist in unserem Shop nicht verfügbar!`
         }
+        else{
         this.products.push(shoppedProduct);
-        return `Ihr Warenkorb enthält jetzt ${this.products.length} Produkt(e)`;
+        return `Ihr Warenkorb enthält jetzt ${this.products.length} Produkt(e)`;}
     }
     getProductInfoCart() {
         this.products.forEach((product) => {
