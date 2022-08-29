@@ -14,13 +14,12 @@ function greetUsers(arr, fn) {
   return greeting;
 }
 
-
-
-
 greetUsers(["John", "Peter", "Mark"], greetMessage);
 // // "Guten Morgen, John"
 // // "Guten Morgen, Peter"
 // // "Guten Morgen, Markus"
+
+
 
 const array = [1, 2, 3, 4];
 const getSquaredNumber = (zahl) => console.log(zahl * zahl);

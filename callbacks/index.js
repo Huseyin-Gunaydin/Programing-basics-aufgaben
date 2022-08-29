@@ -19,19 +19,63 @@
 // }
 // yaz("Hüseyin","Günaydin",(veri)=>{console.log(veri)})
 
-function example(callback) {
-  callback();
+// function example(callback) {
+//   callback();
+// }
+
+// function callback() {
+//   console.log("Hallo aus dem Callback");
+// }
+// example(callback);
+
+// example(() => {
+//   console.log("Hallo aus der Arrow funktion");
+// });
+
+// example(function () {
+//   console.log("hallo aus der anonymen Funktion");
+// });
+
+
+
+
+
+function frageAPIan(beiErfolg, beiFehler){
+
+  const erfolgreich = true;
+  const daten = [];
+  const fehler = {};
+
+  if (erfolgreich){
+    beiErfolg(daten);
+  
+  }else{
+    beiFehler(fehler);
+  }
 }
 
-function callback() {
-  console.log("Hallo aus dem Callback");
+function datenVerarbeiten(daten){
+  console.log(daten);
+  daten.map(datensatz =>({...datensatz, neueProperty: 1}));
 }
-example(callback);
+function fehlerBehandeln(fehler){
+  console.log("Fehler:", fehler)
+}
 
-example(() => {
-  console.log("Hallo aus der Arrow funktion");
-});
 
-example(function () {
-  console.log("hallo aus der anonymen Funktion");
-});
+frageAPIan(datenVerarbeiten, fehlerBehandeln);
+
+function frageAPIan2(){
+
+  const erfolgreich = true;
+  const daten=[];
+
+  if(erfolgreich){
+    console.log(daten);
+    daten.map(datensatz =>({...datensatz, neueProperty: 1}));
+  } else{
+    console.log("Fehler")
+  }
+}
+
+frageAPIan2();
