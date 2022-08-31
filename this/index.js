@@ -1,4 +1,4 @@
-const person1 = {
+  const person1 = {
   id: 1,
   name: "Dominik",
   greet() {
@@ -21,3 +21,5 @@ sayHallo1.bind(person1)();
 
 const sayHallo2 = person2.greet;
 sayHallo1.bind(person2)();
+
+
