@@ -66,3 +66,23 @@ marcelsCarInstanz.start();
  */
 
 console.log(marvinsCarInstanz.constructor.name); // Gibt uns den Namen der Klasse
+
+
+
+
+
+
+class ExtendedArray extends Array {
+  shuffle() {
+    this.sort(() => Math.random() - 0.5);
+  }
+}
+
+let myArr = new ExtendedArray(1, 2, 3, 4, 5);
+
+// console.log(myArr instanceof ExtendedArray)
+// console.log(myArr instanceof Array)
+
+console.log(myArr);
+myArr.shuffle();
+console.log(myArr);
