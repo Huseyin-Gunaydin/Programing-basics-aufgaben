@@ -15,18 +15,38 @@ function getSumOfArray(array, length) {
 }
 console.log(getSumOfArray(array, length)); // 21
 
+
+
+//----------------------------------------------------
+
+
 function getSumOfArray(arr) {
   if (arr.length === 0) return 0;
   return arr[0] + getSumOfArray(arr.slice(1));
 }
 console.log(getSumOfArray(array));
 
+
+function getSumOfArray(arr) {
+  if (arr.length === 0) return 0;
+  const sumOfArrayBelow=getSumOfArray(arr.slice(1));
+  console.log(sumOfArrayBelow);
+  return arr[0] + getSumOfArray(arr.slice(1));
+}
+console.log(getSumOfArray(array));
+
+
+//----------------------------------------------------
+
+
+
 const hello = "hello world";
 function reverse(str) {
   if (str === "") {
     return "";
   } else {
-    return reverse(str.substring(1)) + str.charAt(0);
+    //return reverse(str.substring(1)) + str.charAt(0);
+    return reverse(str.substring(1)) + str[0];
   }
 }
 
