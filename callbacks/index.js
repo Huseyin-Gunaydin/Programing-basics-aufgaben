@@ -36,46 +36,76 @@
 //   console.log("hallo aus der anonymen Funktion");
 // });
 
-
-
-
-
-function frageAPIan(beiErfolg, beiFehler){
-
+function frageAPIan(beiErfolg, beiFehler) {
   const erfolgreich = true;
   const daten = [];
   const fehler = {};
 
-  if (erfolgreich){
+  if (erfolgreich) {
     beiErfolg(daten);
-  
-  }else{
+  } else {
     beiFehler(fehler);
   }
 }
 
-function datenVerarbeiten(daten){
+function datenVerarbeiten(daten) {
   console.log(daten);
-  daten.map(datensatz =>({...datensatz, neueProperty: 1}));
+  daten.map((datensatz) => ({ ...datensatz, neueProperty: 1 }));
 }
-function fehlerBehandeln(fehler){
-  console.log("Fehler:", fehler)
+function fehlerBehandeln(fehler) {
+  console.log("Fehler:", fehler);
 }
-
 
 frageAPIan(datenVerarbeiten, fehlerBehandeln);
 
-function frageAPIan2(){
-
+function frageAPIan2() {
   const erfolgreich = true;
-  const daten=[];
+  const daten = [];
 
-  if(erfolgreich){
+  if (erfolgreich) {
     console.log(daten);
-    daten.map(datensatz =>({...datensatz, neueProperty: 1}));
-  } else{
-    console.log("Fehler")
+    daten.map((datensatz) => ({ ...datensatz, neueProperty: 1 }));
+  } else {
+    console.log("Fehler");
   }
 }
 
 frageAPIan2();
+
+const student = {
+  examResult: function () {
+    return `${this.name} ${this.grade}`;
+  },
+};
+
+const student1 = {
+  name: "Hüseyin",
+  grade: 90,
+};
+
+const student2 = {
+  name: "Vural",
+  grade: 100,
+};
+
+console.log(student.examResult.call(student1));
+console.log(student.examResult.call(student2));
+
+const books = [
+  { name: "1", autor: "A" },
+  { name: "2", autor: "B" },
+  { name: "3", autor: "C" },
+];
+
+const listBooks = () => {
+  books.map((book, index) => {
+    console.log(book, index);
+  });
+};
+
+const addNewBook = (newbook, callback) => {
+  books.push(newbook);
+  callback();
+};
+
+addNewBook({ name: "4", autor: "D" }, listBooks);
