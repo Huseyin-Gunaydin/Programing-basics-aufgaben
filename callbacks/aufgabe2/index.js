@@ -43,7 +43,4 @@ console.log(colorPatternTimes(["Red", "Blue", "Red", "Blue", "Red"])); // return
 // Es gibt 5 Farben, also dauert es 10 Sekunden, jede Farbe zu färben (2 x 5 = 10).
 // Man muss die Stifte 4 Mal wechseln und braucht dafür 4 Sekunden (1 x 4 = 4).
 // 10 + 4 = 14
-console.log(colorPatternTimes(["Blue"])); // return 2
-console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"])); // return 11
-console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"])); // return 13
- */
+console.log(colorPatternTimes(["Blue"])); */
