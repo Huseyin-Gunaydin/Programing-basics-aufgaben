@@ -1,4 +1,4 @@
-// Wir haben verschiedene Möglichkeiten, Zahlen zu runden:
+ // Wir haben verschiedene Möglichkeiten, Zahlen zu runden:
 const a = 32.1947;
 console.log(a);
 
@@ -43,3 +43,8 @@ console.log(0.2 + 0.1 === 0.3);
 // mit einem Vielfachen von 10 multipliziert werden
 // und das Ergebnis dadurch wieder dividiert wird.
 console.log((0.2 * 10 + 0.1 * 10) / 10);
+
+
+
+
+
