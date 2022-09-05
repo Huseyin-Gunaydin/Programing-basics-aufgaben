@@ -34,3 +34,10 @@ function addiere(zahl1, zahl2) {
 }
 
 console.log("Vergessenes return:", addiere(1, 5));
+
+
+function summe (a,b){
+  return a+b;
+}
+console.log(summe(4,5))
+console.log(summe(4,5))
