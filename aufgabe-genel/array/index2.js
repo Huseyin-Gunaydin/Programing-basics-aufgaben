@@ -12,24 +12,34 @@ wordRank("Wednesday is hump day.") ➞ "Wednesday"
 - Die zurückgegebene Zeichenfolge sollte nur alphabetische Zeichen (a-z) enthalten.
 - Die Groß- und Kleinschreibung muss in der zurückgegebenen Zeichenkette beachtet werden (siehe 4. Beispiel oben). */
 
+
+
+
+
+
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const arr = alphabet.split("");
-let paramlength = 0;
+const alpArr = alphabet.split("");
+
 
 function wordRank(param) {
   const arr1 = param.split(" ");
   for (let i = 0; i < arr1.length; i++) {
-    const arr2 = arr1[i].split("");
-    for (let j = 0; j < arr2.length; j++) {
+    let arr2 = arr1[i].split("");
+
+  /*   for (let j = 0; j < arr2.length; j++) {
       let aaa = arr2[j];
-      let bbb = arr.indexOf(aaa);
-      paramlength += bbb + 1;
-    }
+      let bbb = alpArr.indexOf(aaa);
+      paramlength.push(bbb + 1);
+    } */
+
+
+
+
+
   }
-  return paramlength;
 }
 
-console.log(wordRank("The quick brown fox.")); // ➞ "brown"
-wordRank("Nancy is very pretty."); //➞ "pretty"
-wordRank("Check back tomorrow, man!"); // ➞ "tomorrow"
-wordRank("Wednesday is hump day."); //➞ "Wednesday"
+console.log(wordRank("The quick brown fox")); // ➞ "brown"
+// wordRank("Nancy is very pretty."); //➞ "pretty"
+// wordRank("Check back tomorrow, man!"); // ➞ "tomorrow"
+// wordRank("Wednesday is hump day."); //➞ "Wednesday"
