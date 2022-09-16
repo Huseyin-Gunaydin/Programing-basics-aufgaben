@@ -55,6 +55,9 @@ const urunler = [
 ];
 foreach, dizi (array) ve koleksiyon (collection) tabanlı nesnelerin elemanları üzerinden ilerleyen, iterasyon gerçekleştirerek bu elemanlara erişip iş katmanınızı oluşturabileceğiniz bir döngüdür. değişken: foreach döngüsü içinde iterasyon için kullanılacak değeri temsil eder.
 
+
+
+
 // // dizide,  yazdigimiz kosulu saglayen dizi icindeki ilk buldugu elemani gösterir. ve yazdirir. sonrasina bakmaz.
 
 // console.log(
