@@ -87,9 +87,9 @@ console.log(
 
 // // reduce verilen dizinin elemanlari üzerinden colback functioun u uyguluyor. bu function u dödnürdügü sonuc her döndürmede hatirlaniyor. ve bir sonraki döndürülen sonuc bir öncekine ekleniyor.
 
-// const toplamUrunFiyati = urunler.reduce((toplam, urun) => (toplam += urun.fiyat),
-// 0
-// );
+const toplamUrunFiyati = urunler.reduce((toplam, urun) => (toplam += urun.fiyat),
+0
+);
 
 // console.log(toplamUrunFiyati)
 
@@ -127,33 +127,33 @@ console.log(
 
 // }
 
-// function sayHelloTo(name, myName){
-//   if(name===myName) return;
-//   console.log(`-Hello ${name}!`);
-//   counter ++;
-// }
+function sayHelloTo(name, myName){
+  if(name===myName) return;
+  console.log(`-Hello ${name}!`);
+  counter ++;
+}
 
-// console.log({length: names.length, counter})
-// // function greet(name){
-// //   console.log(`Hi, ich bin ${name}!`);
-
-// // }
-
-// console.log("---");
-
-// names.forEach(greetA11);
-
-// function greetA11(myName){
-//   console.log(`Hi, ich bin ${myName}!`);
-//   names.forEach(name => sayHelloTo(name, myName))
-//   counter ++;
+console.log({length: names.length, counter})
+// function greet(name){
+//   console.log(`Hi, ich bin ${name}!`);
 
 // }
 
-// function sayHelloTo(name, myName){
-//   if(name===myName) return;
-//   console.log(`-Hello ${name}!`);
-//   counter ++;
-// }
+console.log("---");
 
-// console.log({length: names.length, counter})
+names.forEach(greetA11);
+
+function greetA11(myName){
+  console.log(`Hi, ich bin ${myName}!`);
+  names.forEach(name => sayHelloTo(name, myName))
+  counter ++;
+
+}
+
+function sayHelloTo(name, myName){
+  if(name===myName) return;
+  console.log(`-Hello ${name}!`);
+  counter ++;
+}
+
+console.log({length: names.length, counter})
